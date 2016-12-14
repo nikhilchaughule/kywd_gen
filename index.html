@@ -29,7 +29,9 @@
     <![endif]-->
     <script src="assets/angular.min.js"></script>
     <script src="assets/app.js"></script>
-    
+    <style>
+    .top-buffer { margin-top:20px; }
+    </style>
 </head>
 <body  ng-controller="MainCtrl">
 
@@ -55,9 +57,19 @@
 
       <div class="starter-template">
         <h1>Keyword Generator</h1>
-        <h1>Hello "{{name}}"</h1>
-
-        <textarea ng-model='name' ng-trim='false' cols="100" placeholder="Enter Text Here"></textarea>
+        <div class="row">
+        	<div class="col-md-6 col-xs-12">
+        		<textarea ng-model='prefix' class="col-md-12" rows="6" ng-trim='false' placeholder="Prefix" ></textarea>
+        	</div>
+        	<div class="col-md-6 col-xs-12">
+        		<textarea ng-model='name' class="col-md-12" rows="6" ng-trim='false' placeholder="Options"  ></textarea>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-md-12 col-xs-12 top-buffer">
+        	<pre>{{output}}</pre>
+        	</div>
+        </div>
       </div>
 
     </div><!-- /.container -->
